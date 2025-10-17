@@ -1,33 +1,17 @@
-<<<<<<< HEAD
 # 3D Proje — Sesle Reaksiyonlu Görselleştirici
 
-Bu proje Next.js (frontend) ve FastAPI (backend) kullanılarak yapılmış bir sesle reaksiyonlu görselleştiricidir.
+Bu proje, Next.js tabanlı bir frontend ve FastAPI tabanlı bir backend içerir. Amaç, ses verisini analiz ederek 3D görselleştirme ile etkileşimli bir kullanıcı deneyimi sunmaktır.
 
-Bu rehber Git ve GitHub kullanmayı az bilenler için adım adım nasıl yükleme (push) yapılacağını ve projeyi çalıştıracağını açıklar.
+## Proje Yapısı
 
-1) Yerel Git deposu oluştur
+- `backend/` : FastAPI ile yazılmış Python backend kodları. Ana dosya: `main.py`. Ses analizi için: `audio_analysis.py`.
+- `frontend/` : Next.js ile yazılmış React tabanlı arayüz. Ana dosyalar: `app/audio.tsx`, `app/page.tsx`, `app/layout.tsx`.
+- `backend/requirements.txt` : Backend bağımlılıkları (ör. fastapi, numpy, scipy, pydantic, uvicorn).
+- `backend/package.json` ve `frontend/package.json` : Gerekli npm paketleri ve scriptler.
 
-Powershell'de proje kök dizinine gidin:
+## Kurulum ve Çalıştırma
 
-```powershell
-cd C:\Users\Yıldız\Desktop\3dproje
-git init
-git add .
-git commit -m "Initial commit: 3D proje"
-```
-
-2) GitHub'da yeni bir repo oluşturun
-
-
-3) Uzak repo ekleyip push edin
-
-```powershell
-git remote add origin https://github.com/<kullanici>/<repo>.git
-git branch -M main
-git push -u origin main
-```
-
-4) Backend çalıştırma (FastAPI)
+### Backend (FastAPI)
 
 Varsa `backend_venv` sanal ortamını aktifleştirin veya yeni bir venv oluşturun.
 
@@ -39,7 +23,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-5) Frontend çalıştırma (Next.js)
+### Frontend (Next.js)
 
 ```powershell
 cd frontend
@@ -47,13 +31,31 @@ npm install
 npm run dev
 ```
 
-6) Paylaşılabilir bağlantı
+## Koddan Örnekler
 
-GitHub'daki repoyu paylaşıp başkalarının kopyalaması için URL'yi kullanabilirsiniz:
+### Backend: Basit API endpoint
 
-https://github.com/<kullanici>/<repo>
+```python
+from fastapi import FastAPI
+app = FastAPI()
 
-7) Notlar
-=======
-# 3D-Proje-
->>>>>>> 6d812e38236a1624441dac3f1ea25546a5d1531f
+@app.get("/ping")
+def ping():
+    return {"message": "pong"}
+```
+
+### Frontend: Ses dosyası yükleme ve görselleştirme
+
+```tsx
+// app/audio.tsx
+import React from "react";
+export default function Audio() {
+  // Ses dosyası yükleme ve analiz kodları burada
+  return <div>Ses dosyası yükle ve görselleştir</div>;
+}
+```
+
+## Notlar
+
+- `backend/requirements.txt` yoksa `pip freeze > requirements.txt` ile oluşturabilirsiniz.
+- Hassas bilgileri (API anahtarları, parolalar) repo'ya eklemeyin.
