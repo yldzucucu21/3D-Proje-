@@ -1,0 +1,25 @@
+## Node
+node_modules/
+.next/
+dist/
+npm-debug.log*
+yarn-debug.log*
+package-lock.json
+
+## Python
+venv/
+backend_venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+.Python
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
