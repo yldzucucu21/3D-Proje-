@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 3D Proje — Sesle Reaksiyonlu Görselleştirici
 
 Bu proje Next.js (frontend) ve FastAPI (backend) kullanılarak yapılmış bir sesle reaksiyonlu görselleştiricidir.
@@ -17,10 +18,6 @@ git commit -m "Initial commit: 3D proje"
 
 2) GitHub'da yeni bir repo oluşturun
 
-- GitHub hesabınıza giriş yapın.
-- Sağ üstteki + > New repository seçeneğiyle yeni bir repo oluşturun.
-- Repo adını (ör. "3dproje") yazın, public/private tercih edin.
-- Oluşturduktan sonra GitHub size uzak repo URL'sini verecek (ör: https://github.com/kullanici/3dproje.git)
 
 3) Uzak repo ekleyip push edin
 
@@ -57,5 +54,6 @@ GitHub'daki repoyu paylaşıp başkalarının kopyalaması için URL'yi kullanab
 https://github.com/<kullanici>/<repo>
 
 7) Notlar
-- `backend/requirements.txt` yoksa oluşturun veya `pip freeze > requirements.txt` ile oluşturabilirsiniz.
-- Hassas bilgileri (API anahtarları, parolalar) repo'ya koymayın.
+=======
+# 3D-Proje-
+>>>>>>> 6d812e38236a1624441dac3f1ea25546a5d1531f
